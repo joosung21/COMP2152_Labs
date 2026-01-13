@@ -1,3 +1,3 @@
-# Define an array variable with the following elements 1, 4, 7, 9.
+# Question 2: Defining an array (list)
 my_array = [1, 4, 7, 9]
 

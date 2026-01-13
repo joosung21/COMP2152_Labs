@@ -1,2 +1,2 @@
-# Sample Coding Question 01 Week 01
+# Sample Coding Questions 01 Week 01
 # Joosung Ahn
