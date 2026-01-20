@@ -1,3 +1,4 @@
+# COMP 2152 - Lab 02 Solution
 import random
 
 choices = ["Rock", "Paper", "Scissors"]
