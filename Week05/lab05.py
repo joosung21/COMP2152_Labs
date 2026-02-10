@@ -83,7 +83,6 @@ result = fizz_buzz(1)
 print("Output: " + str(result))
 print("Expected: ['1']")
 
-
 # ============================================================
 # Question 3: Binary Search (LeetCode #704)
 # Concepts: Divide & Conquer, Iterative and Recursive
