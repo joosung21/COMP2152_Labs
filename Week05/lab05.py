@@ -155,7 +155,6 @@ for nums, target in test_cases:
     result = search_recursive(nums, target)
     print("nums=" + str(nums) + ", target=" + str(target) + " -> index: " + str(result))
 
-
 # ============================================================
 # Verification: Both methods should give same results
 # ============================================================
