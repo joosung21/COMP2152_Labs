@@ -15,10 +15,13 @@ print("=" * 50)
 
 
 def fib(n):
+    # Base cases
     if n == 0:
         return 0
     if n == 1:
         return 1
+    
+    # Recursive case
     return fib(n - 1) + fib(n - 2)
 
 # Test cases for Fibonacci
@@ -41,29 +44,23 @@ print("\n" + "=" * 50)
 print("Question 2: FizzBuzz (#412)")
 print("=" * 50)
 
-
 def fizz_buzz(n):
     result = []
 
-    # TODO: Loop from 1 to n (inclusive)
-    # Hint: Use range(1, n + 1)
     for i in range(1, n + 1):
-        # TODO: Check if divisible by BOTH 3 and 5 FIRST
-        # Hint: if i % 3 == 0 and i % 5 == 0
+        # Check if divisible by both 3 and 5 first
         if i % 3 == 0 and i % 5 == 0:
             result.append("FizzBuzz")
-        # TODO: Then check if divisible by 3 only
+        # Check if divisible by 3 only
         elif i % 3 == 0:
             result.append("Fizz")
-        # TODO: Then check if divisible by 5 only
+        # Check if divisible by 5 only
         elif i % 5 == 0:
             result.append("Buzz")
-        # TODO: Otherwise, append the number as a string
-        # Hint: result.append(str(i))
+        # Otherwise, append the number as a string
         else:
             result.append(str(i))
     return result
-
 
 # Test cases for FizzBuzz
 print("\nTest Case 1: n = 3")
@@ -102,13 +99,16 @@ def binary_search_iterative(nums, target):
     right = len(nums) - 1
 
     while left <= right:
+        # Calculate the middle
         mid = (left + right) // 2
+        
         if nums[mid] == target:
             return mid
         elif target < nums[mid]:
             right = mid - 1
         else:
             left = mid + 1
+    # Base case: If left > right, return -1
     return -1
 
 # Part B: Recursive Solution
