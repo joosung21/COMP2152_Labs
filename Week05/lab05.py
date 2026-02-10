@@ -13,6 +13,9 @@ print("\n" + "=" * 50)
 print("Question 1: Fibonacci Number (#509)")
 print("=" * 50)
 
+# TODO: Implement the fib function using recursion
+# Hint: Base cases: fib(0) = 0, fib(1) = 1
+# Hint: Recursive case: fib(n) = fib(n-1) + fib(n-2)
 
 def fib(n):
     # Base cases
@@ -43,6 +46,9 @@ print("F(20) = " + str(fib(20)))
 print("\n" + "=" * 50)
 print("Question 2: FizzBuzz (#412)")
 print("=" * 50)
+
+# TODO: Implement the fizz_buzz function
+# Hint: You'll need a loop and multiple if conditions
 
 def fizz_buzz(n):
     result = []
@@ -92,6 +98,11 @@ print("Question 3: Binary Search (#704)")
 print("=" * 50)
 
 
+# TODO: Implement the binary_search_iterative function
+# Hint: Use a while loop with left and right pointers
+# Hint: Calculate mid = (left + right) // 2
+# Hint: Compare nums[mid] with target and adjust pointers
+
 # Part A: Iterative Solution
 def binary_search_iterative(nums, target):
     left = 0
@@ -131,7 +142,6 @@ def search_recursive(nums, target):
     if len(nums) == 0:
         return -1
     return binary_search_recursive(nums, target, 0, len(nums) - 1)
-
 
 # Test cases for Binary Search
 print("\n--- Part A: Iterative Binary Search ---")
