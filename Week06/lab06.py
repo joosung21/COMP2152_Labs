@@ -1,7 +1,7 @@
 # ============================================================
 #  WEEK 06 LAB: NETWORK DIAGNOSTIC LOGGER
 #  COMP2152
-#  [Your Name Here]
+#  Joosung Ahn
 # ============================================================
 #
 #  This program runs network commands (ping, nslookup, ifconfig),
@@ -179,15 +179,12 @@ def parse_arp_table(output):
 #
 # ============================================================
 
-
-
 def write_to_log(filename, entry):
     """Append a log entry to a text file."""
     # *** YOUR CODE HERE ***
     # Open the file in append mode ("a") using a with statement
     # Write the entry + "\n" to the file
-    with open(filename, "a") as file:
-        file.write(entry + "\n")
+    pass
 
 
 def read_log(filename):
@@ -195,8 +192,7 @@ def read_log(filename):
     # *** YOUR CODE HERE ***
     # Open the file in read mode ("r") using a with statement
     # Return the result of file.read()
-    with open(filename, "r") as file:
-        return file.read()
+    pass
 
 
 # This function is COMPLETE — it uses write_to_log() above
@@ -207,6 +203,7 @@ def log_command_result(command_name, target, output, filename):
     entry = entry + output
     entry = entry + "-" * 40
     write_to_log(filename, entry)
+
 
 # ============================================================
 #  SECTION D: File I/O — CSV Files
@@ -233,9 +230,7 @@ def log_to_csv(filename, command, target, result, status):
     # Open filename in append mode ("a") with newline=""
     # Create a csv.writer(file)
     # Write one row: [timestamp, command, target, result, status]
-    with open(filename, "a", newline="") as file:
-        writer = csv.writer(file)
-        writer.writerow([timestamp, command, target, result, status])
+    pass
 
 
 def read_csv_log(filename):
@@ -244,10 +239,7 @@ def read_csv_log(filename):
     # Open filename in read mode ("r") with newline=""
     # Create a csv.reader(file)
     # Loop through rows and print: " | ".join(row)
-    with open(filename, "r", newline="") as file:
-        reader = csv.reader(file)
-        for row in reader:
-            print(" | ".join(row))
+    pass
 
 
 # This function is COMPLETE — it uses the CSV functions above
@@ -288,6 +280,7 @@ def analyze_csv_log(filename):
     print("\nResults:")
     for status in status_counts:
         print("  " + status + ": " + str(status_counts[status]))
+
 
 # ============================================================
 #  SECTION E: Exception Handling
@@ -348,19 +341,7 @@ def safe_read_log(filename):
     #     return ""
     # finally:
     #     print "Log read attempt completed."
-    try:
-        with open(filename, "r") as file:
-            content = file.read()
-            if content == "":
-                print("Log file is empty.")
-                return ""
-            else:
-                return content
-    except FileNotFoundError:
-        print("No log file found. Run a diagnostic first.")
-        return ""
-    finally:
-        print("This always runs — success or failure.")
+    pass
 
 
 def get_valid_input(prompt, valid_options):
@@ -371,6 +352,7 @@ def get_valid_input(prompt, valid_options):
             return choice
         else:
             print("Invalid input. Please enter one of: " + ", ".join(valid_options))
+
 
 # ============================================================
 #  SECTION F: The Integrated Program (COMPLETE — provided)
@@ -529,17 +511,3 @@ def main():
 # After completing Tasks 1-3, uncomment the line below to run:
 # main()
 # ============================================================
-
-# Test 1
-write_to_log("test_log.txt", "First ping test - Success")
-write_to_log("test_log.txt", "Second ping test - Failed")
-print(read_log("test_log.txt"))
-
-# Test 2
-log_to_csv("diagnostics.csv", "ping", "google.com", "12.5", "Success")
-log_to_csv("diagnostics.csv", "nslookup", "github.com", "140.82.121.4", "Success")
-read_csv_log("diagnostics.csv")
-
-# Test 3
-content = safe_read_log("does_not_exist.txt")
-print(content)
