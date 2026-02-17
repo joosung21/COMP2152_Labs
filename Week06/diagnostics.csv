@@ -1,0 +1,10 @@
+2026-02-17 11:44:34,ping,youtube.com,4.512,Success
+2026-02-17 11:44:53,nslookup,youtube.com,192.178.192.190,Success
+2026-02-17 11:45:28,ifconfig,en0,6e:ea:f8:16:fe:09 / 10.16.49.62,Captured
+2026-02-17 11:45:48,arp,local,10 devices,Captured
+2026-02-17 11:46:30,ifconfig,en0,6e:ea:f8:16:fe:09 / 10.16.49.62,Captured
+2026-02-17 11:46:39,nslookup,google.com,142.250.137.113,Success
+2026-02-17 11:46:48,ifconfig,en0,6e:ea:f8:16:fe:09 / 10.16.49.62,Captured
+2026-02-17 11:47:04,nslookup,facebook.com,31.13.80.36,Success
+2026-02-17 11:47:09,nslookup,joosung.com,13.248.169.48,Success
+2026-02-17 11:47:23,nslookup,ai.com,104.18.11.248,Success
