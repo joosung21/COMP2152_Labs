@@ -7,7 +7,6 @@ import os
 import sys
 import platform
 
-
 # --- Helper (provided) — error handling example from Week 06 ---
 def display(title, data):
     print(f"\n--- {title} ---")
